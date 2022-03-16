@@ -33,4 +33,15 @@ router.get('/atualizar', async function(req, res, next) {
   res.json(autores);
 });
 
+router.get('/deletar', async function(req, res, next) {
+
+  const deletar = {
+    id: "7"
+    
+  }
+  
+  const autores = await Autor.deletar(deletar);
+  res.json(autores);
+});
+
 module.exports = router;
