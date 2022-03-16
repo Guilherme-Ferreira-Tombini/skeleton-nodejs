@@ -7,7 +7,7 @@ router.get('/', async function(req, res, next) {
   res.json(autores.rows);
 });
 
-router.get('/inserir', async function(req, res, next) {
+router.post('/inserir', async function(req, res, next) {
 
   const autor = {
     nome: "luiz",
@@ -37,7 +37,6 @@ router.get('/deletar', async function(req, res, next) {
 
   const deletar = {
     id: "7"
-    
   }
   
   const autores = await Autor.deletar(deletar);
