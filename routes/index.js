@@ -20,4 +20,17 @@ router.get('/inserir', async function(req, res, next) {
   res.json(autores);
 });
 
+router.get('/atualizar', async function(req, res, next) {
+
+  const atualiza = {
+    nome: "luquinhas",
+    sobrenome: "da Silva",
+    data_de_nascimento: "2099/08/03",
+    id: "9"
+  }
+  
+  const autores = await Autor.atualizar(atualiza);
+  res.json(autores);
+});
+
 module.exports = router;
