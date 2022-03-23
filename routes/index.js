@@ -12,16 +12,8 @@ router.post('/inserir', async function(req, res, next) {
   res.json(autores);
 });
 
-router.get('/atualizar', async function(req, res, next) {
-
-  const atualiza = {
-    nome: "luquinhas",
-    sobrenome: "da Silva",
-    data_de_nascimento: "2099/08/03",
-    id: "9"
-  }
-  
-  const autores = await Autor.atualizar(atualiza);
+router.put('/atualizar', async function(req, res, next) {
+  const autores = await Autor.atualizar(req.body);
   res.json(autores);
 });
 
