@@ -23,7 +23,11 @@ app.use('/', indexRouter);
 app.use('/inserir', indexRouter);
 app.use('/atualizar', indexRouter);
 app.use('/deletar', indexRouter);
-app.use('/users', usersRouter);
+app.use('/livros', indexRouter);
+app.use('/livros-mostrar', indexRouter);
+app.use('/inserir1', indexRouter);
+app.use('/atualizar1', indexRouter);
+app.use('/deletar1', indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

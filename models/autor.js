@@ -30,6 +30,12 @@ const connect = await db.connect();
    return await connect.query(sql, values) 
   
 }
+ static async livros(data){
+  const connect= await db.connect();
+  const sql= "select * from livros where autor_id=$1";
+   const values= [data.id]
+   return await connect.query(sql,values)
+}
   
 }
 
